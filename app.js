@@ -120,7 +120,7 @@ app.get('/api/fetal', function (req, res) {
             resource: {
               resourceType: 'Fetal',
               id: 'FETID-RTX07179',
-              fetalNumber: '1',
+              fetalNumber: 'Fetus 1',
               gender: 'Male',
               fetalIdentifiedDate: '2017-01-02T11:1:00Z',
               status: 'viable',
@@ -134,7 +134,7 @@ app.get('/api/fetal', function (req, res) {
             resource: {
               resourceType: 'Fetal',
               id: 'FETID-RTX07206',
-              fetalNumber: '2',
+              fetalNumber: 'Fetus 2',
               gender: 'Female',
               fetalIdentifiedDate: '2017-02-28T11:1:00Z',
               status: 'viable',
@@ -148,7 +148,7 @@ app.get('/api/fetal', function (req, res) {
             resource: {
               resourceType: 'Fetal',
               id: 'FETID-RTX07207',
-              fetalNumber: '3',
+              fetalNumber: 'Fetus 3',
               gender: 'Male',
               fetalIdentifiedDate: '2017-02-28T11:1:00Z',
               status: 'viable',
@@ -162,7 +162,7 @@ app.get('/api/fetal', function (req, res) {
             resource: {
               resourceType: 'Fetal',
               id: 'FETID-RTX07208',
-              fetalNumber: '1',
+              fetalNumber: 'Fetus 1',
               gender: 'Male',
               fetalIdentifiedDate: '2017-02-28T11:1:00Z',
               status: 'viable',
@@ -176,7 +176,7 @@ app.get('/api/fetal', function (req, res) {
             resource: {
               resourceType: 'Fetal',
               id: 'FETID-RTX07209',
-              fetalNumber: '2',
+              fetalNumber: 'Fetus 2',
               gender: 'Male',
               fetalIdentifiedDate: '2017-02-28T11:1:00Z',
               status: 'viable',
@@ -190,7 +190,7 @@ app.get('/api/fetal', function (req, res) {
             resource: {
               resourceType: 'Fetal',
               id: 'FETID-RTX07210',
-              fetalNumber: '1',
+              fetalNumber: 'Fetus 1',
               gender: 'Unknown',
               fetalIdentifiedDate: '2017-02-28T11:1:00Z',
               status: 'viable',
