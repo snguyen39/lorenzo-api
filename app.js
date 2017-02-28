@@ -7418,60 +7418,18 @@ app.get('/api/AllergyIntolerance', function (req, res) {
     var jsonObj = [{
       resourceType: 'AllergyIntolerance',
       id: '1',
-      recordedDate: '2010',
+      recordedDate: '26-Sep-2016',
       recorder: {
         reference: 'Practitioner/1',
       },
       patient: {
-        reference: 'Patient/35',
+        reference: 'Patient/1',
       },
       substance: {
         coding: [
           {
             system: 'http://snomed.info/sct',
             code: '20847002',
-            display: 'Streptokinase',
-          }
-        ]
-      },
-      clinicalStatus: 'active', verificationStatus: 'confirmed',
-      type: 'allergy',
-      category: 'drug',
-      note: {
-        text: 'Note text'
-      },
-      reaction: [
-        {
-          severity: '',
-          manifestation: [
-            {
-              coding: [
-                {
-                  system: 'http://snomed.info/sct',
-                  code: '',
-                  display: '',
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      resourceType: 'AllergyIntolerance',
-      id: '2',
-      recordedDate: '01-Oct-2015',
-      recorder: {
-        reference: 'Practitioner/2',
-      },
-      patient: {
-        reference: 'Patient/35',
-      },
-      substance: {
-        coding: [
-          {
-            system: 'http://snomed.info/sct',
-            code: '227493005',
             display: 'Cashew Nuts',
           }
         ]
@@ -7484,14 +7442,14 @@ app.get('/api/AllergyIntolerance', function (req, res) {
       },
       reaction: [
         {
-          severity: '',
+          severity: 'severe',
           manifestation: [
             {
               coding: [
                 {
                   system: 'http://snomed.info/sct',
                   code: '',
-                  display: '',
+                  display: 'Anaphylactic reaction',
                 }
               ]
             }
@@ -7501,20 +7459,20 @@ app.get('/api/AllergyIntolerance', function (req, res) {
     },
     {
       resourceType: 'AllergyIntolerance',
-      id: '3',
-      recordedDate: '25-Feb-2015',
+      id: '2',
+      recordedDate: '01-Oct-2016',
       recorder: {
-        reference: 'Practitioner/1',
+        reference: 'Practitioner/2',
       },
       patient: {
-        reference: 'Patient/35',
+        reference: 'Patient/1',
       },
       substance: {
         coding: [
           {
             system: 'http://snomed.info/sct',
-            code: '',
-            display: 'Anadin Paracetamol',
+            code: '227493005',
+            display: 'Penicilin',
           }
         ]
       },
@@ -7526,14 +7484,56 @@ app.get('/api/AllergyIntolerance', function (req, res) {
       },
       reaction: [
         {
-          severity: '',
+          severity: 'moderate',
           manifestation: [
             {
               coding: [
                 {
                   system: 'http://snomed.info/sct',
                   code: '',
-                  display: '',
+                  display: 'Hives',
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      resourceType: 'AllergyIntolerance',
+      id: '3',
+      recordedDate: '20-Sep-2016',
+      recorder: {
+        reference: 'Practitioner/1',
+      },
+      patient: {
+        reference: 'Patient/1',
+      },
+      substance: {
+        coding: [
+          {
+            system: 'http://snomed.info/sct',
+            code: '',
+            display: 'Fish',
+          }
+        ]
+      },
+      clinicalStatus: 'active', verificationStatus: 'confirmed',
+      type: 'allergy',
+      category: 'food',
+      note: {
+        text: 'Note text'
+      },
+      reaction: [
+        {
+          severity: 'moderate',
+          manifestation: [
+            {
+              coding: [
+                {
+                  system: 'http://snomed.info/sct',
+                  code: '',
+                  display: 'Hives',
                 }
               ]
             }
