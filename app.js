@@ -107,6 +107,112 @@ app.get('/api/welcome', function (req, res) {
   res.json(jsonObj);
 });
 
+app.get('/api/fetal', function (req, res) {
+
+  var patient_id = req.query.patient;
+
+  if (patient_id) {
+    var jsonObj = [
+      {
+        resourceType: 'Bundle',
+        entry: [
+          {
+            resource: {
+              resourceType: 'Fetal',
+              id: 'FETID-RTX07179',
+              fetalNumber: '1',
+              gender: 'Male',
+              fetalIdentifiedDate: '2017-01-02T11:1:00Z',
+              status: 'viable',
+              subject: {
+                reference: 'http://hlblor005.cschealthlab.com/LMHIAService/api/v1/patient/1'
+              },
+              outCome: 'Live',
+            }
+          },
+          {
+            resource: {
+              resourceType: 'Fetal',
+              id: 'FETID-RTX07206',
+              fetalNumber: '2',
+              gender: 'Female',
+              fetalIdentifiedDate: '2017-02-28T11:1:00Z',
+              status: 'viable',
+              subject: {
+                reference: 'http://hlblor005.cschealthlab.com/LMHIAService/api/v1/patient/1'
+              },
+              outCome: 'Miscarriage',
+            }
+          },
+          {
+            resource: {
+              resourceType: 'Fetal',
+              id: 'FETID-RTX07207',
+              fetalNumber: '3',
+              gender: 'Male',
+              fetalIdentifiedDate: '2017-02-28T11:1:00Z',
+              status: 'viable',
+              subject: {
+                reference: 'http://hlblor005.cschealthlab.com/LMHIAService/api/v1/patient/1'
+              },
+              outCome: 'Other inc vanishing/ papyraceous twin ectopic',
+            }
+          },
+          {
+            resource: {
+              resourceType: 'Fetal',
+              id: 'FETID-RTX07208',
+              fetalNumber: '1',
+              gender: 'Male',
+              fetalIdentifiedDate: '2017-02-28T11:1:00Z',
+              status: 'viable',
+              subject: {
+                reference: 'http://hlblor005.cschealthlab.com/LMHIAService/api/v1/patient/8'
+              },
+              outCome: 'Stillbirth',
+            }
+          },
+          {
+            resource: {
+              resourceType: 'Fetal',
+              id: 'FETID-RTX07209',
+              fetalNumber: '2',
+              gender: 'Male',
+              fetalIdentifiedDate: '2017-02-28T11:1:00Z',
+              status: 'viable',
+              subject: {
+                reference: 'http://hlblor005.cschealthlab.com/LMHIAService/api/v1/patient/8'
+              },
+              outCome: 'Termination of Pregnancy < 24weeks',
+            }
+          },
+          {
+            resource: {
+              resourceType: 'Fetal',
+              id: 'FETID-RTX07210',
+              fetalNumber: '1',
+              gender: 'Unknown',
+              fetalIdentifiedDate: '2017-02-28T11:1:00Z',
+              status: 'viable',
+              subject: {
+                reference: 'http://hlblor005.cschealthlab.com/LMHIAService/api/v1/patient/14'
+              },
+              outCome: 'Termination of Pregnancy >= 24weeks',
+            }
+          },
+        ]
+      }
+
+    ];
+
+    res.json(jsonObj);
+  } else {
+    res.send("Error");
+  }
+
+});
+
+
 app.get('/api/procedure', function (req, res) {
 
   var patient_id = req.query.patient;
@@ -1369,8 +1475,8 @@ app.get('/api/Patient/:patient_id', function (req, res) {
     gender: 'Female',
     birthDate: '1990-04-12T06:30:00Z',
     deceasedBoolean: false,
-    numberOfFetus: 1,
-    agreedEddDate: '15-Jan-2017',
+    numberOfFetus: 3,
+    agreedEddDate: '17-Mar-2017',
     gravida: 'G1',
     parity: 'P1+0',
     lmpDate: '10-Jun-16',
@@ -1391,7 +1497,7 @@ app.get('/api/Patient/:patient_id', function (req, res) {
       {
         system: 'phone',
         use: 'mobile',
-        value: '123456 123345',
+        value: '043823832',
         rank: 1
       },
       {
@@ -1403,13 +1509,13 @@ app.get('/api/Patient/:patient_id', function (req, res) {
       {
         system: 'phone',
         use: 'work',
-        value: '',
+        value: '043823832',
         rank: 3
       },
       {
         system: 'email',
         use: 'work',
-        value: 'jyfkyu@example.com',
+        value: 'hart.Susan@example.com',
         rank: 4
       }
     ],
@@ -2511,7 +2617,7 @@ app.get('/api/Patient/:patient_id', function (req, res) {
     birthDate: '1980-12-10T06:30:00Z',
     deceasedBoolean: false,
     numberOfFetus: 2,
-    agreedEddDate: '1-Aug-2017',
+    agreedEddDate: '15-Jan-2017',
     gravida: 'G4',
     parity: 'P1+0',
     lmpDate: '10-Apr-16',
@@ -3488,8 +3594,8 @@ app.get('/api/Patient/:patient_id', function (req, res) {
     gender: 'Female',
     birthDate: '1982-12-15T06:30:00Z',
     deceasedBoolean: false,
-    numberOfFetus: 2,
-    agreedEddDate: '18-Apr-2017',
+    numberOfFetus: 1,
+    agreedEddDate: '21-Apr-2017',
     gravida: 'G3',
     parity: 'P1+0',
     lmpDate: '15-Jul-16',
@@ -3510,7 +3616,7 @@ app.get('/api/Patient/:patient_id', function (req, res) {
       {
         system: 'phone',
         use: 'mobile',
-        value: '112998 090022',
+        value: '043823832',
         rank: 1
       },
       {
@@ -3522,13 +3628,13 @@ app.get('/api/Patient/:patient_id', function (req, res) {
       {
         system: 'phone',
         use: 'work',
-        value: '',
+        value: '043823832',
         rank: 3
       },
       {
         system: 'email',
         use: 'work',
-        value: 'emai@example.com',
+        value: 'ann.Brown@example.com',
         rank: 4
       }
     ],
